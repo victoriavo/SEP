@@ -1,3 +1,71 @@
-<p>
-  signup works!
-</p>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-faded justify-content-between">
+        <a class="text-black h4" id="AppName" routerLink="/">On The House</a>
+    </nav>
+    <div class="card bg-dark" style="margin: 10px 30px">
+      <div class="container" style="padding: 20px">
+        <form [formGroup]="changeData">
+            <div class="form-group">
+                <input type="text" class="form-control lead" id="nameInput" placeholder="Display Name" formControlName="userName">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control lead" id="emailInput" placeholder="Email" formControlName="email">
+            </div>
+            <!--
+            <div class="form-group">
+                <input type="text" class="form-control lead" id="emailConfirm" placeholder="Confirm Email" formControlName="reemail">
+            </div>-->
+            <div class="form-group">
+                <input type="password" class="form-control lead" id="passwordInput" placeholder="Password" formControlName="password">
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>School</option>
+                      <option>Southern Methodist University</option>
+                      <option>University of North Texas</option>
+                      <option>The University of Texas at Dallas</option>
+                    </select>
+                  </div>
+              <!--<input type="text" class="form-control lead" id="schoolInput" placeholder="School" formControlName="school">-->
+          </div>
+        </form>
+      </div>
+      <div class="wrapper text-center" style="margin-bottom: 20px">
+        <button type="button" class="btn btn-primary" (click)="signup()" [disabled]="!changeData.valid">Sign Up</button>
+      </div>
+    </div>
+    <!--
+    <div class="d-flex container bg-light flex-column px-0 pb-4 pt-2 col-md-3 rounded mt-4">
+        <div class="alert alert-danger p-3 m-3 text-center" [hidden]="!failure" role="alert">
+            Something went wrong. <br> Please try again.
+        </div>
+        <div class="alert alert-success p-3 m-3 text-center" [hidden]="!success" role="alert">
+                Success!
+        </div>
+        <h1 class="text-center display-4 mb-3">Sign Up</h1>
+        <div class="container">
+            <form [formGroup]="changeData">
+                <div class="form-group">
+                    <input type="text" class="form-control lead" id="nameInput" placeholder="Name" formControlName="userName">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control lead" id="emailInput" placeholder="Email" formControlName="email">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control lead" id="emailConfirm" placeholder="Confirm Email" formControlName="reemail">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control lead" id="passwordInput" placeholder="Password" formControlName="password">
+                </div>
+            </form>
+        </div>
+        <div class="wrapper text-center pt-3">
+            <button type="button" class="btn btn-primary" (click)="signup()" [disabled]="!changeData.valid">Sign Up</button>
+        </div>
+        <a class="text-center mt-3" routerLink="/login">
+            <small>Return to login</small>
+        </a>
+    </div> 
+  -->
+</body>
