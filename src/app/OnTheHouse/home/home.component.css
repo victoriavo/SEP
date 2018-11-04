@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 
-#appName {
+#appName  {
     font-family: 'Lobster', cursive;
     font-size: 100px;
+    opacity: 1 !important;
+    cursor: default;
 }
 
 body {
@@ -13,11 +15,12 @@ div {
     z-index: 5;
 }
 
-
-
-#AppName {
-    cursor: default;
+.container {
+    width: 45%;
+    height: 60%;
+    background-color: rgba(255, 255, 255, 0.75);
 }
+
 
 h4 {
     z-index: 6;
