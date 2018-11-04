@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DomainModule } from '../domain';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { DomainModule } from '../domain';
         ReactiveFormsModule
     ],
     declarations: [
-        HomeComponent
+        HomeComponent,
+        AboutUsComponent
     ],
     exports: [
         
