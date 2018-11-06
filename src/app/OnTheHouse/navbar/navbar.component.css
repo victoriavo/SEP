@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+#appName {
+    font-family: 'Lobster', cursive;
+    font-size: 3vw;
+}
+
+.dropdown-pull-right {
+    float: right !important;
+    right: 0;
+    left: auto;
+}
+  
+.dropdown-pull-right>.dropdown-menu {
+    right: 0;
+    left: auto;
+}

@@ -10,6 +10,7 @@ import { DashboardComponent } from "./dashboard/dashboard.component";
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { MakePostComponent } from './make-post/make-post.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { MakePostComponent } from './make-post/make-post.component';
         DashboardComponent,
         SignupComponent,
         LoginComponent,
-        MakePostComponent
+        MakePostComponent,
+        NavbarComponent
     ],
     exports: [
         
