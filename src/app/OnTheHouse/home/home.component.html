@@ -1,5 +1,4 @@
 <body>
-    
         <div class="d-flex flex-column justify-content-center w-100">
                 <navbar textcolor="text-black"></navbar>     
         
@@ -22,14 +21,55 @@
                         </h4>
                     </div>
                     <div class="wrapper text-center p-3">
-                        <button type="button" class="btn btn-dark btn-lg btn-block"  (click)="login()">Login</button>
+                        <button type="button" class="btn btn-dark btn-lg btn-block"  data-toggle="modal" data-target="#loginModal">Login</button>
                     </div>
                     <div class="wrapper text-center p-3">
-                         <button type="button" class="btn btn-dark btn-lg btn-block"  (click)="signup()">Sign Up</button>
+                         <button type="button" class="btn btn-dark btn-lg btn-block" data-toggle="modal" data-target="#signupModal">Sign Up</button>
                     </div>
                     <div class="bg mx-auto rounded"></div>
                 </div>
             </div>
+
+            <div class="modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="loginModalLong">Login</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="signupModalLong">Sign Up</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                 ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            
 
 
 </body>
