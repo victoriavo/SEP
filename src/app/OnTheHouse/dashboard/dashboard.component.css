@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+#appName  {
+    font-family: 'Lobster', cursive;
+    cursor: default;
+}
+
+navbar-background {
+    background-color: #01B682;
+}
+
+postheading {
+    font-size: 30vh;
+}
+
+
