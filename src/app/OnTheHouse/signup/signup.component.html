@@ -1,7 +1,9 @@
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-faded justify-content-between">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-faded justify-content-between">
         <a class="text-black h4" id="AppName" routerLink="/">On The House</a>
-    </nav>
+    </nav> -->
+    <div class="d-flex flex-column justify-content-center w-100">  
+    <navbar textcolor="text-black"></navbar> 
     <div class="card bg-dark" style="margin: 10px 30px">
       <div class="container" style="padding: 20px">
         <form [formGroup]="changeData">
@@ -34,6 +36,7 @@
       <div class="wrapper text-center" style="margin-bottom: 20px">
         <button type="button" class="btn btn-primary" (click)="signup()" [disabled]="!changeData.valid">Sign Up</button>
       </div>
+    </div>
     </div>
     <!--
     <div class="d-flex container bg-light flex-column px-0 pb-4 pt-2 col-md-3 rounded mt-4">

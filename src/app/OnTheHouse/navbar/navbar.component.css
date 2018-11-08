@@ -5,6 +5,10 @@
     font-size: 3vw;
 }
 
+a:hover {
+    color: #000000;
+}
+
 .dropdown-pull-right {
     float: right !important;
     right: 0;

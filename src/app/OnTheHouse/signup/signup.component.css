@@ -5,5 +5,9 @@
 }
 
 body {
+<<<<<<< HEAD
     background: #000000 url("/src/images/bg2.jpg") repeat top right;   
+=======
+    background: #000000 url("/src/images/bg2.jpg") repeat top right; 
+>>>>>>> 03db6e79aeee39302979d6056fb576211daed8c3
 }
