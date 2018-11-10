@@ -71,38 +71,15 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                            <div class="modal-body">
-                                    <form [formGroup]="changeData">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control lead" id="nameInput" placeholder="Display Name" formControlName="userName">
-                                            </div>
-                                            <div class="form-group">
-                                                <input type="text" class="form-control lead" id="emailInput" placeholder="Email" formControlName="email">
-                                            </div>
-                                            <!--
-                                            <div class="form-group">
-                                                <input type="text" class="form-control lead" id="emailConfirm" placeholder="Confirm Email" formControlName="reemail">
-                                            </div>-->
-                                            <div class="form-group">
-                                                <input type="password" class="form-control lead" id="passwordInput" placeholder="Password" formControlName="password">
-                                            </div>
-                                            <div class="form-group">
-                                                <div class="form-group">
-                                                    <select class="form-control" id="exampleFormControlSelect1">
-                                                      <option>School</option>
-                                                      <option>Southern Methodist University</option>
-                                                      <option>University of North Texas</option>
-                                                      <option>The University of Texas at Dallas</option>
-                                                    </select>
-                                                  </div>
-                                              <!--<input type="text" class="form-control lead" id="schoolInput" placeholder="School" formControlName="school">-->
-                                          </div>
-                                        </form>
-                            </div>
+                            <div>
+                            <!-- <div class="modal-body"> -->
+                                <app-signup></app-signup>
+                            <!-- </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                 <button type="button" class="btn btn-primary"  (click)="signup()" [disabled]="!changeData.valid">Enter</button>
-                            </div>
+                            </div> -->
+                        </div>
                         </div>
                     </div>
                 </div>
