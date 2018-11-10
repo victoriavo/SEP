@@ -12,19 +12,18 @@ export class DashboardComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private activatedRoute: ActivatedRoute
-    //,
-    //private postRepository : PostRepository
+    private activatedRoute: ActivatedRoute,
+    private postRepository : PostRepository
   ) {}
 
   public ngOnInit() {
-  //  this.postRepository.getAll()
-  //  .subscribe(x => this.onPostsLoaded(x));
+    this.postRepository.getAll()
+    .subscribe(x => this.onPostsLoaded(x));
   }
 
-  //private onPostsLoaded(posts: Post[]){
-  // this.posts = posts;
-  //}
+  private onPostsLoaded(posts: Post[]){
+   this.posts = posts;
+  }
 
   private createNewPost(){
     this.router.navigateByUrl('/post');
