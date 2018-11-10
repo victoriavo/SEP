@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Post, PostRepository } from '../../domain';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -7,13 +8,21 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  private posts: Post[];
 
   constructor(
     private router: Router,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private postRepository : PostRepository
   ) {}
 
-  ngOnInit() {
+  public ngOnInit() {
+    this.postRepository.getAll()
+    //.subscribe(x => this.onPostsLoaded(x)); <-- statement causes an error 
+  }
+
+  private onPostsLoaded(posts: Post[]){
+    this.posts = posts;
   }
 
   private createNewPost(){
