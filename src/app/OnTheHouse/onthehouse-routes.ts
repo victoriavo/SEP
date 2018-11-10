@@ -13,9 +13,7 @@ export const ACCOUNTS_ROUTES : Routes = [
     { path: 'null', component: HomeComponent},
     { path: 'home', component: HomeComponent},
     { path: 'about', component: AboutUsComponent},
-    { path: 'signup', component: SignupComponent},
     { path: 'dashboard', component: DashboardComponent},
-    { path: 'login', component: LoginComponent},
     { path: 'post', component: MakePostComponent},
     
 
