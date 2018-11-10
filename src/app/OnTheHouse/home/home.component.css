@@ -8,12 +8,14 @@
 
 body {
     background: #000000 url("/src/images/bg2.jpg") repeat top right;   
+
 }
 
 
 .container {
     width: 45%;
     height: 60%;
+    background-color: rgba(255, 255, 255, 0.75);
 }
 
 
