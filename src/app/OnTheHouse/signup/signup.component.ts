@@ -16,7 +16,7 @@ export class SignupComponent implements OnInit {
   changeData: FormGroup;
   public success: boolean = false;
   public failure: boolean = false;
-  selectedSchool: string;
+  selectedSchool: string = "";
   schools = [
     {name: "Southern Methodist University", value: 1},
     {name: "University of North Texas", value: 2},
@@ -40,12 +40,13 @@ export class SignupComponent implements OnInit {
   }
 
   public signup() {
+    console.log("data " + this.newUser.email.toString());
     this.http.post('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/signup',
       {
         username: this.newUser.userName.toString(),
         email: this.newUser.email.toString(),
         password: this.newUser.password.toString(),
-        school: this.selectedSchool
+        school: this.selectedSchool.toString()
       }
     ).subscribe(data => {console.log(data);
       if (data['valid'] == 0) {
