@@ -1,11 +1,12 @@
 body {
     background: #000000 url("/src/images/bg2.jpg") repeat top right;   
     z-index: -1;
+    padding: 20px;
 }
 
 #Post-Form {
     margin: auto;
-    z-index: 1;
+    z-index: 3;
     width: 50vw;
 }
 

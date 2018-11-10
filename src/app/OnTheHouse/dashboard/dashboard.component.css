@@ -20,3 +20,17 @@ h1 {
 button {
     float: right;
 }
+
+#row-container{
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+#card-title {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.card-info {
+    padding-left: 10px;
+}

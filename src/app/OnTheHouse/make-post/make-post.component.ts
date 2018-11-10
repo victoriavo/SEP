@@ -8,14 +8,14 @@ import { Post } from '../../domain/index';
 })
 export class MakePostComponent{
 
-  //private newPost = new Post;
+  private newPost = new Post;
   //private _posts : Post[] = [];
 
   //@Input()
-  //public get posts(): Posts[] {
+  //public get posts(): Post[] {
   //  return this._posts;
   //}
-  //public set posts(value: Posts[]) {
+  //public set posts(value: Post[]) {
   //  if (this._posts !== value) {
   //    this.posts.emit(value);
   //  }
@@ -25,14 +25,14 @@ export class MakePostComponent{
   //@Output()
   //postsChange: EventEmitter<Post[]> = new EventEmitter<Post[]>();
 
-  constructor() { }
+  //constructor() { }
 
   //ngOnInit() {
   //}
 
-  //private addReview() {
-  //  this.posts.push(this.newPost);
-  //  this.newPost = new Post;
-  //  this.postsChange.emit(this.posts);
-  //}
+  private addPost() {
+    //this.posts.push(this.newPost);
+    this.newPost = new Post;
+    //this.postsChange.emit(this.posts);
+  }
 }

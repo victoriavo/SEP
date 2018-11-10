@@ -5,4 +5,5 @@ export class Post {
     startTime?: string;
     endTime?: string;
     description?: string;
+    votes?: number;
 }
