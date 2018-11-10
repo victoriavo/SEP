@@ -13,4 +13,10 @@ postheading {
     font-size: 30vh;
 }
 
+h1 {
+    display: inline-block; 
+}
 
+button {
+    float: right;
+}

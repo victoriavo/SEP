@@ -1,0 +1,24 @@
+body {
+    background: #000000 url("/src/images/bg2.jpg") repeat top right;   
+    z-index: -1;
+}
+
+#Post-Form {
+    margin: auto;
+    z-index: 1;
+    width: 50vw;
+}
+
+.card-header {
+    text-align: center;
+}
+
+.bg-site {
+    background-color: #01B682;
+}
+
+#Post-Button {
+    display: block;
+    margin: auto;
+    width: 15vw;
+}
