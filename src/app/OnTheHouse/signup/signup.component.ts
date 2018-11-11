@@ -48,7 +48,7 @@ export class SignupComponent implements OnInit {
         location: this.selectedSchool.toString()
       }
     ).subscribe(data => {console.log(data);
-      if(data['valid'] == 'false'){
+      if(data['valid'] == 0){
         this.failure = true;
       } else {
         this.success = true;

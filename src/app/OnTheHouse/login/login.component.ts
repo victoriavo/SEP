@@ -36,9 +36,9 @@ export class LoginComponent implements OnInit {
   }
 
   public login() {
-    // if (this.changeData.valid) {
-    //   this.wantRemember ? localStorage.setItem('email', this.user.email) : localStorage.removeItem('email');
-    // }
+    //  if (this.changeData.valid) {
+    //    localStorage.setItem('email', this.user.email);
+    //  }
 
     this.http.post('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/login',
       {
@@ -49,7 +49,7 @@ export class LoginComponent implements OnInit {
       console.log(data);
       if (data['session_id'] != 401) {
         localStorage.setItem('session_id', data['session_id']);
-        this.router.navigate(['/']);
+        this.router.navigate(['/dashboard']);
       }else {
         this.loggedIn = false;
       }
