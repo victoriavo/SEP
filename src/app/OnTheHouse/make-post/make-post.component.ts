@@ -10,6 +10,7 @@ export class MakePostComponent{
 
   private newPost = new Post;
   //private _posts : Post[] = [];
+  private posts : Post[];
 
   //@Input()
   //public get posts(): Post[] {
@@ -31,7 +32,7 @@ export class MakePostComponent{
   //}
 
   private addPost() {
-    //this.posts.push(this.newPost);
+    this.posts.push(this.newPost);
     this.newPost = new Post;
     //this.postsChange.emit(this.posts);
   }
