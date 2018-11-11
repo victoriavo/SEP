@@ -34,3 +34,11 @@ button {
 .card-info {
     padding-left: 10px;
 }
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
