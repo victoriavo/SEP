@@ -9,42 +9,19 @@
   </div>
 </div>
 
-<div class="row" *ngIf="posts">
-  <div class="col-sm-4" *ngFor="let post of posts">
-    <div class="card mb-4" style="height: 28rem;">
-      <h1>hahahahah</h1>
-      <!--
-      <div class="p-3" style="max-width:100%; height:50%; justify-content: center;
-      align-items: center;">
-          <img class="card-img-top img-fluid" src="/src/images/{{product.imageName}}" 
-          alt="product image" style="padding-right:20%; padding-left:20%;display:flex-box; height: 100%; max-width:100%; object-fit: contain">
-          <div class="clearfix">
-            <h4><span class="badge badge-pill badge-success float-right mr-2">{{product.price | currency:display:'symbol'}}</span></h4>
-          </div>  
-      </div>    
-      -->
-      <div class="card-body mt-2 mb-2">
-        <div style="height: 20%">
-          <h4 class="card-title" style="text-align: center">{{post.description}}</h4>
-        </div>  
-      </div>
-    </div>
-  </div>
-</div>  
-
-<div class="row">
+<div class="row" *ngFor="let post of posts">
   <div class="container" id="row-container">
     <div class="card border-dark" style="height: 15rem;">
-      <h3 class="card-title" id="card-title">{{post_one.eventName}}</h3>
-      <h5 class="card-info">Organized by: {{post_one.organization}}</h5>
-      <h5 class="card-info">Location: {{post_one.location}}</h5>
-      <h5 class="card-info">Start Time: {{post_one.startTime}}</h5>
-      <h5 class="card-info">End Time: {{post_one.endTime}}</h5>
-      <p class="card-info">Description: {{post_one.description}}</p>
+      <h3 class="card-title" id="card-title">{{post.eventName}}</h3>
+      <h5 class="card-info">Organized by: {{post.organization}}</h5>
+      <h5 class="card-info">Location: {{post.location}}</h5>
+      <h5 class="card-info">Start Time: {{post.startTime}}</h5>
+      <h5 class="card-info">End Time: {{post.endTime}}</h5>
+      <p class="card-info">Description: {{post.description}}</p>
       <div id="button-group" style="position: absolute; top: 25%; right: 20px">
         <i class="fa fa-angle-up" style="font-size:36px"
         (click)="upvote()"></i>
-        <h5>{{post_one.votes}}</h5>
+        <h5>{{post.votes}}</h5>
         <i class="fa fa-angle-down" style="font-size:36px"
         (click)="downvote()"></i>
       </div>
