@@ -4,6 +4,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { OnTheHouseModule } from './OnTheHouse/onthehouse.module';
+import { FormsModule } from '@angular/forms';
 
 const defaultRoute = '/home';
 
@@ -14,7 +15,8 @@ const defaultRoute = '/home';
         RouterModule.forRoot([
             { path: '', redirectTo: defaultRoute, pathMatch: 'full' }
         ]), 
-        HttpClientModule
+        HttpClientModule,
+        FormsModule
     ], 
     declarations: [ 
         AppComponent 

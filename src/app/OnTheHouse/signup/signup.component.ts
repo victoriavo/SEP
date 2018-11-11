@@ -40,7 +40,6 @@ export class SignupComponent implements OnInit {
   }
 
   public signup() {
-    console.log("data " + this.newUser.email.toString());
     this.http.post('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/signup',
       {
         username: this.newUser.userName.toString(),
@@ -49,15 +48,15 @@ export class SignupComponent implements OnInit {
         school: this.selectedSchool.toString()
       }
     ).subscribe(data => {console.log(data);
-      if (data['valid'] == 0) {
-        this.failure = true;
-      } else {
-        this.success = true;
-        setTimeout((router: Router) => {
-          this.router.navigate(['/login']);
-        }, 3000);  //3s
-      }
-    });
+        console.log("yay");
+      //   this.failure = true;
+      // } else {
+      //   this.success = true;
+      //   setTimeout((router: Router) => {
+      //     this.router.navigate(['/login']);
+      //   }, 3000);  //3s
+      // }
+    }, (err) => {console.log(err)});
 
   }
 

@@ -18,7 +18,7 @@ export class HomeComponent {
     public sanitizer: DomSanitizer
   ){
 
-    //this.getAllRatings(); 
+    // this.getAllRatings(); 
   }
  
   // public getAllRatings(){
@@ -26,6 +26,6 @@ export class HomeComponent {
   //     .subscribe(data => {
   //     console.log(data);
   
-  //   });
+  //   }, (err) => {console.log(err)});
   // }
 }
