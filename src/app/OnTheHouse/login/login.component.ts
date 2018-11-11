@@ -47,8 +47,9 @@ export class LoginComponent implements OnInit {
       }
     ).subscribe(data => {
       console.log(data);
-      if (data['session_id'] != 401) {
-        localStorage.setItem('session_id', data['session_id']);
+      if (data[0]['session_id'] != 401) {
+        localStorage.removeItem('session_id');
+        localStorage.setItem('session_id', data[0]['session_id']);
         this.router.navigate(['/dashboard']);
       }else {
         this.loggedIn = false;
