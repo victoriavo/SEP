@@ -49,9 +49,10 @@ export class SignupComponent implements OnInit {
         
       }
     ).subscribe(data => {console.log(data);
-      if(data['valid'] == 0){
+      if(data[0]['valid'] == 0){ 
         this.failure = true;
       } else {
+        localStorage.setItem('session_id', data['session_id']);
         this.success = true;
         setTimeout((router: Router) => {
           this.router.navigate(['/dashboard']);
