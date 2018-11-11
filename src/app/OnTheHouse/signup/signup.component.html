@@ -1,5 +1,11 @@
 <!-- <body> -->
         <div class="modal-body">
+                <div class="alert alert-danger p-3 m-3 text-center" [hidden]="!failure" role="alert">
+                        Something went wrong. <br> Please try again.
+                    </div>
+                    <div class="alert alert-success p-3 m-3 text-center" [hidden]="!success" role="alert">
+                            Success!
+                    </div>
         <form [formGroup]="changeData">
                 <div class="form-group">
                     <input type="text" class="form-control lead" id="nameInput" placeholder="Display Name" formControlName="userName">
@@ -14,8 +20,8 @@
                     <input type="password" class="form-control lead" id="passwordInput" placeholder="Password" formControlName="password">
                 </div>
                 <div class="form-group">
-                        <select [(ngModel)]="selectedSchool" [ngModelOptions]="{standalone: true}" placeholder="School" class="form-control" id="exampleFormControlSelect1" name="School">
-                          <option *ngFor="let school of schools">
+                        <select [(ngModel)]="selectedSchool" [ngModelOptions]="{standalone: true}" placeholder="School" class="form-control" id="exampleFormControlSelect1">
+                            <option *ngFor="let school of schools">
                               {{school.name}}
                           </option>
                         </select>
