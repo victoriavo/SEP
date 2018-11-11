@@ -35,16 +35,18 @@
 <div class="row">
   <div class="container" id="row-container">
     <div class="card border-dark" style="height: 15rem;">
-      <h3 class="card-title" id="card-title">Event Name</h3>
-      <h5 class="card-info">Organization Name</h5>
-      <h5 class="card-info">Location</h5>
-      <h5 class="card-info">Start Time</h5>
-      <h5 class="card-info">End Time</h5>
-      <p class="card-info p-3">Description....lorem ipsum stuff and stuff</p>
+      <h3 class="card-title" id="card-title">{{post_one.eventName}}</h3>
+      <h5 class="card-info">Organized by: {{post_one.organization}}</h5>
+      <h5 class="card-info">Location: {{post_one.location}}</h5>
+      <h5 class="card-info">Start Time: {{post_one.startTime}}</h5>
+      <h5 class="card-info">End Time: {{post_one.endTime}}</h5>
+      <p class="card-info">Description: {{post_one.description}}</p>
       <div id="button-group" style="position: absolute; top: 25%; right: 20px">
-        <i class="fa fa-angle-up" style="font-size:36px"></i>
-        <h5>100</h5>
-        <i class="fa fa-angle-down" style="font-size:36px"></i>
+        <i class="fa fa-angle-up" style="font-size:36px"
+        (click)="upvote()"></i>
+        <h5>{{post_one.votes}}</h5>
+        <i class="fa fa-angle-down" style="font-size:36px"
+        (click)="downvote()"></i>
       </div>
     </div>
   </div>
