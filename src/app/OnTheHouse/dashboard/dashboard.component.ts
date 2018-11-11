@@ -15,8 +15,8 @@ export class DashboardComponent implements OnInit {
     organization:'Mustang Heroes',
     eventName:'Justice Week Racial Inequality Awareness',
     location:'HTSC Forum',
-    startTime:'2018-10-31C12:00:00', 
-    endTime: '2018-10-31C12:00:00',
+    startTime:'2018-11-20 12:30:00', 
+    endTime: '2018-11-20 13:00:00',
     description:'Engage in a panel discussion & get free lunch.',
     votes: -2
   };
