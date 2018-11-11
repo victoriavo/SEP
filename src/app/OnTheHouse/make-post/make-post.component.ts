@@ -10,7 +10,7 @@ export class MakePostComponent{
 
   private newPost = new Post;
   //private _posts : Post[] = [];
-  private posts : Post[];
+  private posts : Post[] = [];
 
   //@Input()
   //public get posts(): Post[] {

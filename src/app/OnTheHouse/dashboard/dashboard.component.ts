@@ -41,12 +41,14 @@ export class DashboardComponent implements OnInit {
     this.router.navigateByUrl('/post');
   }
 
-  private upvote(){
-    this.post_one['votes'] += 1;
-
+  private upvote(post: Post){
+    post['votes'] += 1;
   }
 
-  private downvote(){
-    this.post_one['votes'] -= 1;
+  private downvote(post: Post){
+    post['votes'] -= 1;
+    if (post['votes'] == -5) {
+      this.posts.splice(this.posts.indexOf(post), 1);
+    }
   }
 }

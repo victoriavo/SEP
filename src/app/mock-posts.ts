@@ -35,6 +35,6 @@ export const POSTS: Post[] = [
         startTime:'2016-01-17T:08:44:29+0100', 
         endTime: '2016-01-17T:08:44:29+0100',
         description:'Engage in a panel discussion & get free lunch.',
-        votes: -2
+        votes: -4
     }
 ]
