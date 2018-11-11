@@ -15,8 +15,8 @@
       <h3 class="card-title" id="card-title">{{post.eventName}}</h3>
       <h5 class="card-info">Organized by: {{post.organization}}</h5>
       <h5 class="card-info">Location: {{post.location}}</h5>
-      <h5 class="card-info">Start Time: {{post.startTime}}</h5>
-      <h5 class="card-info">End Time: {{post.endTime}}</h5>
+      <h5 class="card-info">Start Time: {{post.startTime | date:'medium' }}</h5>
+      <h5 class="card-info">End Time: {{post.endTime | date:'medium' }}</h5>
       <p class="card-info">Description: {{post.description}}</p>
       <div id="button-group" style="position: absolute; top: 25%; right: 20px">
         <i class="fa fa-angle-up" style="font-size:36px" [class.positive]="post.votes > 0"
