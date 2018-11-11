@@ -5,32 +5,38 @@
     <div class="card-block mt-2">
       <div class="form-group m-3">
         <label for="organizationInput">Organization</label>
-        <input type="text" class="form-control" id="organizationInput" aria-describedby="organizationHelp" placeholder="Enter organization name">
+        <input type="text" class="form-control" id="organizationInput" aria-describedby="organizationHelp" placeholder="Enter organization name"
+          [(ngModel)]="newPost.organization">
       </div>
       <div class="form-group m-3">
         <label for="eventNameInput">Event Name</label>
-        <input type="text" class="form-control" id="eventNameInput" aria-describedby="eventNameHelp" placeholder="Enter event name">
+        <input type="text" class="form-control" id="eventNameInput" aria-describedby="eventNameHelp" placeholder="Enter event name"
+          [(ngModel)]="newPost.eventName">
       </div>
       <div class="form-group m-3">
           <label for="locationInput">Location</label>
-          <input type="text" class="form-control" id="locationInput" aria-describedby="locationHelp" placeholder="Enter location">
+          <input type="text" class="form-control" id="locationInput" aria-describedby="locationHelp" placeholder="Enter location"
+            [(ngModel)]="newPost.location">
       </div>
       <div class="form-group m-3">
           <label for="whenInputStart">Start</label>
-          <input class="form-control" type="datetime-local" value="2018-10-31C12:00:00" id="whenInputStart">
+          <input class="form-control" type="datetime-local" value="2018-10-31C12:00:00" id="whenInputStart"
+            [(ngModel)]="newPost.startTime">
           <label for="whenInputEnd">End</label>
-          <input class="form-control" type="datetime-local" value="2018-10-31C12:00:00" id="whenInputEnd">
+          <input class="form-control" type="datetime-local" value="2018-10-31C12:00:00" id="whenInputEnd"
+            [(ngModel)]="newPost.endTime">
       </div>
       <div class="form-group p-3">
         <label for="description">Description</label>
-        <textarea class="form-control col-md-12" rows="5" id="description"></textarea>
+        <textarea class="form-control col-md-12" rows="5" id="description"
+          [(ngModel)]="newPost.description"></textarea>
       </div>
 
       <button type="button" id="Post-Button"
       class="btn bg-site mb-4 text-white"
-      (click)="add()"
+      (click)="addPost()"
       [disabled]="!newPost.organization || !newPost.eventName || !newPost.location
-      || !newPost.Start || !newPost.description">Post</button>
+      || !newPost.startTime || !newPost.description">Post</button>
     </div>
   </div>
 </body>

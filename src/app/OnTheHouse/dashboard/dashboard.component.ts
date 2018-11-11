@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Post, PostRepository } from '../../domain';
+import { Post } from '../../domain';
 import { Router, ActivatedRoute } from '@angular/router';
+import { POSTS } from '../../mock-posts';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,6 +9,8 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  posts = POSTS;
+
   post_one: Post = {
     organization:'Mustang Heroes',
     eventName:'Justice Week Racial Inequality Awareness',
@@ -18,12 +21,11 @@ export class DashboardComponent implements OnInit {
     votes: -2
   };
 
-  private posts: Post[];
+  //private posts: Post[];
 
   constructor(
     private router: Router,
-    private activatedRoute: ActivatedRoute,
-    private postRepository : PostRepository
+    private activatedRoute: ActivatedRoute
   ) {}
 
   public ngOnInit() {
