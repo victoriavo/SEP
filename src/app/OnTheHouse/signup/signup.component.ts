@@ -45,7 +45,7 @@ export class SignupComponent implements OnInit {
         username: this.newUser.userName.toString(),
         email: this.newUser.email.toString(),
         password: this.newUser.password.toString(),
-        school: this.selectedSchool.toString()
+        location: this.selectedSchool.toString()
         
       }
     ).subscribe(data => {console.log(data);
