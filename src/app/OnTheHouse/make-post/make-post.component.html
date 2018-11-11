@@ -31,12 +31,20 @@
         <textarea class="form-control col-md-12" rows="5" id="description"
           [(ngModel)]="newPost.description"></textarea>
       </div>
-
+      <div class="row">
+          <div class="col-sm-12 text-center">
+       
       <button type="button" id="Post-Button"
-      class="btn bg-site mb-4 text-white"
+      class="btn bg-site mb-4 text-white btn-md"
       (click)="addPost()"
       [disabled]="!newPost.organization || !newPost.eventName || !newPost.location
       || !newPost.startTime || !newPost.description">Post</button>
+
+      <button type="button" id="Post-Button" class="btn bg-site mb-4 text-white btn-md" routerLink="/dashboard" >Cancel</button>
+    </div>
+  </div>
+        
+        
     </div>
   </div>
 </body>
