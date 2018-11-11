@@ -12,6 +12,7 @@ import { LoginComponent } from './login/login.component';
 import { MakePostComponent } from './make-post/make-post.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { LogoutComponent } from './logout/logout.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { FooterComponent } from './footer/footer.component';
         LoginComponent,
         MakePostComponent,
         NavbarComponent,
-        FooterComponent
+        FooterComponent,
+        LogoutComponent
     ],
     exports: [
         
