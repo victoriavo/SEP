@@ -8,6 +8,16 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  post_one: Post = {
+    organization:'Mustang Heroes',
+    eventName:'Justice Week Racial Inequality Awareness',
+    location:'HTSC Forum',
+    startTime:'2018-10-31C12:00:00', 
+    endTime: '2018-10-31C12:00:00',
+    description:'Engage in a panel discussion & get free lunch.',
+    votes: -2
+  };
+
   private posts: Post[];
 
   constructor(
@@ -17,8 +27,8 @@ export class DashboardComponent implements OnInit {
   ) {}
 
   public ngOnInit() {
-    this.postRepository.getAll()
-    .subscribe(x => this.onPostsLoaded(x));
+    //this.postRepository.getAll()
+    //.subscribe(x => this.onPostsLoaded(x));
   }
 
   private onPostsLoaded(posts: Post[]){
@@ -27,5 +37,14 @@ export class DashboardComponent implements OnInit {
 
   private createNewPost(){
     this.router.navigateByUrl('/post');
+  }
+
+  private upvote(){
+    this.post_one['votes'] += 1;
+
+  }
+
+  private downvote(){
+    this.post_one['votes'] -= 1;
   }
 }
