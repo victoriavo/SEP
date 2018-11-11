@@ -16,7 +16,7 @@ export class SignupComponent implements OnInit {
   changeData: FormGroup;
   public success: boolean = false;
   public failure: boolean = false;
-  selectedSchool: string = "";
+  selectedSchool: string = "Southern Methodist University";
   schools = [
     {name: "Southern Methodist University", value: 1},
     {name: "University of North Texas", value: 2},
