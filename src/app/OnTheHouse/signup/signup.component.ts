@@ -46,16 +46,17 @@ export class SignupComponent implements OnInit {
         email: this.newUser.email.toString(),
         password: this.newUser.password.toString(),
         school: this.selectedSchool.toString()
+        
       }
     ).subscribe(data => {console.log(data);
-        console.log("yay");
-      //   this.failure = true;
-      // } else {
-      //   this.success = true;
-      //   setTimeout((router: Router) => {
-      //     this.router.navigate(['/login']);
-      //   }, 3000);  //3s
-      // }
+      if(data['valid'] == 'false'){
+        this.failure = true;
+      } else {
+        this.success = true;
+        setTimeout((router: Router) => {
+          this.router.navigate(['/dashboard']);
+        }, 3000);  //3s
+      }
     }, (err) => {console.log(err)});
 
   }

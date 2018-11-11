@@ -18,14 +18,14 @@ export class HomeComponent {
     public sanitizer: DomSanitizer
   ){
 
-    // this.getAllRatings(); 
+    //this.getAllRatings(); 
   }
  
-  // public getAllRatings(){
-  //   this.http.get('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/testuser')
-  //     .subscribe(data => {
-  //     console.log(data);
+//   public getAllRatings(){
+//     this.http.get('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/testuser')
+//       .subscribe(data => {
+//       console.log(data);
   
-  //   }, (err) => {console.log(err)});
-  // }
+//     }, (err) => {console.log(err)});
+//   }
 }
