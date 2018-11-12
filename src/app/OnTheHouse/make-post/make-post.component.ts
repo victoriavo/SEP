@@ -32,6 +32,7 @@ export class MakePostComponent{
   //}
 
   private addPost() {
+    console.log(this.newPost);
     this.posts.push(this.newPost);
     this.newPost = new Post;
     //this.postsChange.emit(this.posts);
