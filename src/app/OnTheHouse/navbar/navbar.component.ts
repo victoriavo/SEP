@@ -17,7 +17,6 @@ public name:string;
     constructor(public router: Router, public http: HttpClient) {}
 
     ngOnInit(){
-        // this.loggedIn = false;
         
         if(localStorage.getItem('session_id') !== null && localStorage.getItem('session_id') != '0'){
             this.http.get('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/session/' + localStorage.getItem('session_id')
