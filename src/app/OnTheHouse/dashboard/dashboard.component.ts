@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Post, PostRepository } from '../../domain';
 import { Router, ActivatedRoute } from '@angular/router';
-// import { POSTS } from '../../mock-posts';
+// import { Posts } from '../../mock-posts';
 
 @Component({
   selector: 'app-dashboard',

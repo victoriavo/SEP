@@ -11,6 +11,8 @@ export class NavbarComponent {
 
 public loggedIn:boolean;
 public name:string;
+public user_id:number = 0;
+public location:string = "";
 
     @Input() textcolor: string;
 
@@ -24,6 +26,8 @@ public name:string;
                 if(data[0]['valid'] == 1){
                     this.loggedIn = true;
                     this.name = data[0]['name'];
+                    this.user_id = data[0]['user_id'];
+                    this.location = data[0]['location'];
                 }else{
                     this.loggedIn = false;
                     localStorage.removeItem('session_id');
@@ -33,5 +37,6 @@ public name:string;
             this.loggedIn = false;
         }
   }
+
 
 }
