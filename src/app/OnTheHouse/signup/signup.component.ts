@@ -13,6 +13,7 @@ import { AbstractControl } from '@angular/forms/src/model';
 export class SignupComponent implements OnInit {
 
   public newUser = new User();
+  public loggedIn: boolean = false;
   changeData: FormGroup;
   public success: boolean = false;
   public failure: boolean = false;
@@ -39,6 +40,29 @@ export class SignupComponent implements OnInit {
 
   }
 
+  public login() {
+    
+    this.http.post('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/login',
+    {
+            email: this.newUser.email.toString(),
+            password: this.newUser.password.toString()
+    }
+    ).subscribe(data => {
+    console.log(data);
+    if (data[0]['session_id'] != 401) {
+      if(localStorage.getItem('session_id') !== null){
+        localStorage.removeItem('session_id');
+      }
+      localStorage.setItem('session_id', data[0]['session_id']);
+      this.router.navigate(['/dashboard']);
+    }else {
+      this.loggedIn = false;
+      alert("Wrong email or password.")
+    }
+    });
+    
+  }
+
   public signup() {
     this.http.post('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/signup',
       {
@@ -57,6 +81,7 @@ export class SignupComponent implements OnInit {
         setTimeout((router: Router) => {
           this.router.navigate(['/dashboard']);
         }, 3000);  //3s
+        this.login();
       }
     }, (err) => {console.log(err)});
 

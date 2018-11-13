@@ -32,6 +32,6 @@ public name:string;
         }else{
             this.loggedIn = false;
         }
-  }
+    }
 
 }
