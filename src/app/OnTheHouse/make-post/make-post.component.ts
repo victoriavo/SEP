@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
-import { Post } from '../../domain/index';
+import { Post } from '../../domain';
 
 @Component({
   selector: 'app-make-post',
@@ -8,33 +8,34 @@ import { Post } from '../../domain/index';
 })
 export class MakePostComponent{
 
-  private newPost = new Post;
-  //private _posts : Post[] = [];
-  private posts : Post[] = [];
+  private newPost = new Post();
 
-  //@Input()
-  //public get posts(): Post[] {
-  //  return this._posts;
-  //}
-  //public set posts(value: Post[]) {
-  //  if (this._posts !== value) {
-  //    this.posts.emit(value);
-  //  }
-  //  this._posts = value;
-  //}
+  private _posts : Post[] = [];
 
-  //@Output()
-  //postsChange: EventEmitter<Post[]> = new EventEmitter<Post[]>();
+  constructor(){
+    
+  }
 
-  //constructor() { }
+  @Input()
+  public get posts(): Post[] {
+      return this._posts;
+    }
+    public set posts(value: Post[]) {
+      if (this._posts !== value) {
+        this.postsChange.emit(value);
+      }
+      this._posts = value;
+    }
 
-  //ngOnInit() {
-  //}
+  @Output()
+  postsChange : EventEmitter<Post[]> = new EventEmitter<Post[]>();
 
-  private addPost() {
-    console.log(this.newPost);
-    this.posts.push(this.newPost);
-    this.newPost = new Post;
-    //this.postsChange.emit(this.posts);
+  private addPost(){
+      this.newPost.location = "";
+      console.log(this.newPost);
+      this.posts.push(this.newPost);
+      this.newPost = new Post();
+      this.postsChange.emit(this.posts);
+
   }
 }
