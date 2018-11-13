@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient, HttpClientModule, HttpResponse } from '@angular/common/http';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 
@@ -12,5 +12,5 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 export class HomeComponent {
 
-
 }
+

@@ -36,7 +36,7 @@ public location:string = "";
         }else{
             this.loggedIn = false;
         }
-  }
+    }
 
 
 }

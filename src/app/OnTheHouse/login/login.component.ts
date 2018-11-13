@@ -45,8 +45,10 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/dashboard']);
       }else {
         this.loggedIn = false;
+        alert("Wrong email or password.")
       }
     });
+
   }
 
 
