@@ -62,10 +62,12 @@ export class PostsComponent {
             
         }).subscribe(data => { console.log(data)
             this.router.navigate(['/dashboard']);
-            for(var j = 0; j < this.posts.length; j++){
-                if(this.posts[j].id == post.id){
-                    this.newNum = parseInt(this.posts[j].votes.toString()) + 1;
-                    this.posts[j].votes = this.newNum;
+            if(data['valid'] == 1){
+                for(var j = 0; j < this.posts.length; j++){
+                    if(this.posts[j].id == post.id){
+                        this.newNum = parseInt(this.posts[j].votes.toString()) + 1;
+                        this.posts[j].votes = this.newNum;
+                    }
                 }
             }
         });
@@ -80,10 +82,12 @@ export class PostsComponent {
             
         }).subscribe(data => { console.log(data)
             this.router.navigate(['/dashboard']);
-            for(var k = 0; k < this.posts.length; k++){
-                if(this.posts[k].id == post.id){
-                    this.newNum = parseInt(this.posts[k].votes.toString()) - 1;
-                    this.posts[k].votes = this.newNum
+            if(data['valid'] == 1){
+                for(var k = 0; k < this.posts.length; k++){
+                    if(this.posts[k].id == post.id){
+                        this.newNum = parseInt(this.posts[k].votes.toString()) - 1;
+                        this.posts[k].votes = this.newNum
+                    }
                 }
             }
         });
