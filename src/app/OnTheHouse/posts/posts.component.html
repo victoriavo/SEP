@@ -1,15 +1,7 @@
 <div class="breadcrumb" id="noposts" *ngIf="posts?.length == 0; else notEmpty">Be the first to add a post!</div>
 <ng-template #notEmpty>
     <div class="card" *ngFor="let post of posts; let i = index;" >
-            <!-- <h4 class="star card-header">
-                <rating [rating]='review?.rating'></rating>
-            </h4> -->
             <div class="card-body bg-light">
-                <!-- <h5 class="text-muted"> {{review?.userName}}
-                    <p id="date">{{review?.date | date:'mediumDate'}}</p>
-                </h5>
-                <p>"{{review?.comment}}"</p> -->
-            <!-- </div> -->
             <div class="container" id="row-container">
                     <div class="card border-dark" style="height: 15rem;">
                       <h3 class="card-title" id="card-title">{{post?.eventName}}</h3>

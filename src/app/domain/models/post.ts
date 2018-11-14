@@ -1,5 +1,5 @@
 export class Post {
-    //id?: number;
+    id?: string;
     organization?: string;
     eventName?: string;
     location?: string;
