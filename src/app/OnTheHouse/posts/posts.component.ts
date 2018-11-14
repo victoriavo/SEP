@@ -65,7 +65,7 @@ export class PostsComponent {
             for(var j = 0; j < this.posts.length; j++){
                 if(this.posts[j].id == post.id){
                     this.newNum = parseInt(this.posts[j].votes.toString()) + 1;
-                    // this.posts[j].votes = this.newNum.toString();
+                    this.posts[j].votes = this.newNum;
                 }
             }
         });
@@ -83,7 +83,7 @@ export class PostsComponent {
             for(var k = 0; k < this.posts.length; k++){
                 if(this.posts[k].id == post.id){
                     this.newNum = parseInt(this.posts[k].votes.toString()) - 1;
-                    // this.posts[k].votes = this.newNum.toString();
+                    this.posts[k].votes = this.newNum
                 }
             }
         });
