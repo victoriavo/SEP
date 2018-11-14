@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Post } from '../../domain';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RouterModule, Router, ActivatedRoute } from '@angular/router';
+import { Number } from 'core-js/library/web/timers';
 
 @Component({
     selector: 'posts',
@@ -15,6 +16,8 @@ export class PostsComponent {
     private numPosts : number;
     private parsedJSON : Array<Object>[] = [];
     private user_id: string = "";
+    private newNum: number = 0;
+    private newNum2: string = "";
     
       constructor(public router: Router, public http: HttpClient){
         
@@ -59,7 +62,12 @@ export class PostsComponent {
             
         }).subscribe(data => { console.log(data)
             this.router.navigate(['/dashboard']);
-      
+            for(var j = 0; j < this.posts.length; j++){
+                if(this.posts[j].id == post.id){
+                    this.newNum = parseInt(this.posts[j].votes.toString()) + 1;
+                    // this.posts[j].votes = this.newNum.toString();
+                }
+            }
         });
 
     }
@@ -72,7 +80,12 @@ export class PostsComponent {
             
         }).subscribe(data => { console.log(data)
             this.router.navigate(['/dashboard']);
-      
+            for(var k = 0; k < this.posts.length; k++){
+                if(this.posts[k].id == post.id){
+                    this.newNum = parseInt(this.posts[k].votes.toString()) - 1;
+                    // this.posts[k].votes = this.newNum.toString();
+                }
+            }
         });
 
     }
