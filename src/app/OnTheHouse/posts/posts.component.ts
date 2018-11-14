@@ -14,6 +14,7 @@ export class PostsComponent {
     private posts : Post[] = [];
     private numPosts : number;
     private parsedJSON : Array<Object>[] = [];
+    private user_id: string = "";
     
       constructor(public router: Router, public http: HttpClient){
         
@@ -39,8 +40,42 @@ export class PostsComponent {
             }
         
         });
+            
+            if(localStorage.getItem('session_id') !== null && localStorage.getItem('session_id') != '0'){
+                this.http.get('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/session/' + localStorage.getItem('session_id')
+                ).subscribe(data => { console.log(data)
+                    if(data[0]['valid'] == 1){
+                        this.user_id = data[0]['user_id'];
+                    }
+                });
+            }
       }
 
+      public upvote(post: Post){
+        this.http.post('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/vote', {
+            post_id: post.id,
+            user_id: this.user_id,
+            upvote: "true"
+            
+        }).subscribe(data => { console.log(data)
+            
+      
+        });
+
+    }
+
+    public downvote(post: Post){
+        this.http.post('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/vote', {
+            post_id: post.id,
+            user_id: this.user_id,
+            upvote: "false"
+            
+        }).subscribe(data => { console.log(data)
+            
+      
+        });
+
+    }
 
 
 
