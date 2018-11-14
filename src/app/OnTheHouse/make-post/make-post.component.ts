@@ -68,6 +68,7 @@ export class MakePostComponent{
           this.success = false;
           this.errorMessage = output['errorMessage'];
         }
+        this.router.navigate(['/dashboard']);
     });
 
   }

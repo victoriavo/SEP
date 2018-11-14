@@ -58,7 +58,7 @@ export class PostsComponent {
             upvote: "true"
             
         }).subscribe(data => { console.log(data)
-            
+            this.router.navigate(['/dashboard']);
       
         });
 
@@ -71,7 +71,7 @@ export class PostsComponent {
             upvote: "false"
             
         }).subscribe(data => { console.log(data)
-            
+            this.router.navigate(['/dashboard']);
       
         });
 
