@@ -10,10 +10,31 @@
     color: red;
 }
 
+i.upvote:focus {
+    color: green;
+}
+
 i.upvote:hover {
     color: darkgreen;
 }
 
+i.downvote:focus {
+    color: red;
+}
+
 i.downvote:hover {
     color: darkred;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+.appName  {
+    font-family: 'Lobster', cursive;
+    cursor: default;
+}
+
+.post-background {
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(1, 182, 130, 0.50);
 }
