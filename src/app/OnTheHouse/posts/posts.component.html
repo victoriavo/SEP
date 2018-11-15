@@ -11,10 +11,10 @@
                       <h5 class="card-info">End Time: {{post?.endTime | date:'medium' }}</h5>
                       <p class="card-info">Description: {{post?.description}}</p>
                       <div id="button-group" style="position: absolute; top: 25%; right: 20px">
-                        <i class="fa fa-angle-up" style="font-size:36px" [class.positive]="post.votes > 0"
+                        <i class="fa fa-angle-up upvote" style="font-size:36px;"
                         (click)="upvote(post)"></i>
                         <h5>{{post?.votes}}</h5>
-                        <i class="fa fa-angle-down" style="font-size:36px" [class.negative]="post.votes < 0"
+                        <i class="fa fa-angle-down downvote" style="font-size:36px" 
                         (click)="downvote(post)"></i>
                       </div>
                     </div>
