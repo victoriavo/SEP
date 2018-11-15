@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+/* #appName  {
+    font-family: 'Lobster', cursive;
+    font-size: 10vw;
+    cursor: default;
+} */
+
+body {
+    background: #000000 url("/src/images/bg2.jpg") repeat top right;   
+
+}
+
+/* 
+.container {
+    width: 45%;
+    height: 60%;
+    background-color: rgba(255, 255, 255, 0.75);
+} */
+
+

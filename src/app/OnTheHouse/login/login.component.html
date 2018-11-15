@@ -18,5 +18,8 @@
 <div class="modal-footer">
   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
   <button type="button" class="btn btn-primary"  (click)="login()" [disabled]="!changeData.valid" data-dismiss="modal">Enter</button>
+  <a class="text-center text-dark mb-3" routerLink="/reset" data-dismiss="modal">
+    <small>Forgot your password?</small>
+</a>
 </div>
 
