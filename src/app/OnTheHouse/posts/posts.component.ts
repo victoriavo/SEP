@@ -11,6 +11,7 @@ import { Number } from 'core-js/library/web/timers';
 })
 
 export class PostsComponent {
+    color: string;
     private newPost = new Post();
     private posts : Post[] = [];
     private numPosts : number;
@@ -18,7 +19,6 @@ export class PostsComponent {
     private user_id: string = "";
     private newNum: number = 0;
     private newNum2: string = "";
-    
       constructor(public router: Router, public http: HttpClient){
         
       }
@@ -67,6 +67,8 @@ export class PostsComponent {
                     if(this.posts[j].id == post.id){
                         this.newNum = parseInt(this.posts[j].votes.toString()) + 1;
                         this.posts[j].votes = this.newNum;
+                        //document.getElementById('upvote').style.color = "green";
+                        //this.color = "green";
                     }
                 }
             }
@@ -86,7 +88,7 @@ export class PostsComponent {
                 for(var k = 0; k < this.posts.length; k++){
                     if(this.posts[k].id == post.id){
                         this.newNum = parseInt(this.posts[k].votes.toString()) - 1;
-                        this.posts[k].votes = this.newNum
+                        this.posts[k].votes = this.newNum;
                     }
                 }
             }

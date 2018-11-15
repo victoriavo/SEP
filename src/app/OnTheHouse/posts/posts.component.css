@@ -9,3 +9,11 @@
 .negative {
     color: red;
 }
+
+i.upvote:hover {
+    color: darkgreen;
+}
+
+i.downvote:hover {
+    color: darkred;
+}
