@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LogoutComponent } from './logout/logout.component';
 import { PostsComponent } from './posts/posts.component';
 import { PassResetComponent } from './pass-reset/pass-reset.component';
+import { AdvertComponent } from './advert/advert.component'
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { PassResetComponent } from './pass-reset/pass-reset.component';
         FooterComponent,
         LogoutComponent,
         PostsComponent,
-        PassResetComponent
+        PassResetComponent,
+        AdvertComponent
     ],
     exports: [
         
