@@ -6,30 +6,50 @@
         Success!
     </div>
     <form [formGroup]="changeData">
+
         <div class="form-group">
             <input type="text" class="form-control lead" id="nameInput" placeholder="Display Name" formControlName="userName">
+        </div>
+        <div class="alert  alert-danger" *ngIf="changeData.get('userName').hasError('minlength') && changeData.get('userName').dirty">
+            Display Name Must Be At Least 3 Characters
         </div>
         <div class="alert  alert-danger" *ngIf="changeData.get('userName').hasError('required') && changeData.get('userName').touched">
             Display Name Required
         </div>
+
         <div class="form-group">
             <input type="text" class="form-control lead" id="emailInput" placeholder="Email" formControlName="email">
         </div>
         <div class="alert  alert-danger" *ngIf="changeData.get('email').hasError('required') && changeData.get('email').touched">
             Email Required
         </div>
+        <div class="alert  alert-danger" 
+        *ngIf="changeData.get('email').hasError('email') 
+        && changeData.get('email').dirty
+        && !changeData.get('email').hasError('required')">
+            Invalid Email
+        </div>
+
         <div class="form-group">
             <input type="text" class="form-control lead" id="reemailInput" placeholder="Re-enter Email" formControlName="reemail">
         </div>
         <div class="alert  alert-danger" *ngIf="changeData.get('reemail').hasError('required') && changeData.get('reemail').touched">
             Re-Enter Email Required
         </div>
+        <div class="alert  alert-danger" *ngIf="changeData.get('reemail').hasError('pattern') && changeData.get('email').dirty">
+            Email Does Not Match
+        </div>
+
         <div class="form-group">
             <input type="password" class="form-control lead" id="passwordInput" placeholder="Password" formControlName="password">
         </div>
         <div class="alert  alert-danger" *ngIf="changeData.get('password').hasError('required') && changeData.get('password').touched">
             Password Required
         </div>
+        <div class="alert  alert-danger" *ngIf="changeData.get('password').hasError('minlength') && changeData.get('password').dirty">
+            Password Must Be At Least 8 Characters
+        </div>
+
         <div class="form-group">
             <select [(ngModel)]="selectedSchool" [ngModelOptions]="{standalone: true}" placeholder="School" class="form-control" id="exampleFormControlSelect1" name="School" >
                 <option *ngFor="let school of schools">
@@ -37,6 +57,7 @@
                 </option>
             </select>
         </div>
+
     </form> 
 </div>
 <div class="modal-footer">
