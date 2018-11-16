@@ -1,0 +1,45 @@
+.card-info {
+    padding-left: 10px;
+}
+
+.card-img-bottom {
+    height: 15rem;
+    object-fit: cover;
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: red;
+}
+
+i.upvote:focus {
+    color: green;
+}
+
+i.upvote:hover {
+    color: darkgreen;
+}
+
+i.downvote:focus {
+    color: red;
+}
+
+i.downvote:hover {
+    color: darkred;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
+.appName  {
+    font-family: 'Lobster', cursive;
+    cursor: default;
+}
+
+.post-background {
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(1, 182, 131, 0.253);
+}

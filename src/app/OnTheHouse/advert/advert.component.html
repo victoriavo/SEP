@@ -1,15 +1,19 @@
+<div *ngIf="advert.name == null; else notEmpty"></div>
 <ng-template #notEmpty>
-    <div class="card-body bg-light">
-        <div class="container" id="row-container">
-            <div class="card border-dark" style="height: 15rem;">
-                <h3 class="card-title" id="card-title">AD</h3>
-                <h5 class="card-info">Organized by: {{advert?.name}}</h5>
-                <h5 class="card-info">Location: {{advert?.location}}</h5>
-                <h5 class="card-info">Start Time: {{advert?.link}}</h5>
-                    
-                <p class="card-info">Description: {{post?.information}}</p>
-            </div>
-        </div>
-    </div>
-<br>
-</ng-template>
+        <div class="card mb-3" style="border:none" >
+                <a href="{{advert?.link}}" target="_blank">
+                <div class="card-body post-background">
+                <div class="container" id="row-container">
+                        <div class="card border-dark" style="height: 15rem;">
+                          <h5 class="card-title appName pt-1 pl-1" id="card-title">AD</h5>
+                          <h3 class="card-title appName p-1" id="card-title">{{advert?.name}}</h3>
+                          <h2 class="card-info">{{advert?.information}}</h2>
+                          <h5 class="card-info">Address: {{advert?.location}}</h5>
+                          <!-- <img class="card-img-bottom" src="/src/images/2.jpg" alt="Card image cap"> -->
+                         
+                        </div>
+                      </div>
+                
+                </div>
+        <br>
+        
