@@ -35,7 +35,7 @@ export class PostsComponent {
                 this.posts[i] = new Post();
                 this.posts[i].organization = data[i]['organization'];
                 this.posts[i].eventName = data[i]['event_name'];
-                this.posts[i].location = data[i]['local_location'];
+                this.posts[i].location = data[i]['location'];
                 this.posts[i].startTime = data[i]['start_time'];
                 this.posts[i].endTime = data[i]['end_time'];
                 this.posts[i].description = data[i]['description'];
