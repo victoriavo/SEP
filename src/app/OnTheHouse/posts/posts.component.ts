@@ -84,6 +84,7 @@ export class PostsComponent {
       }
 
       public upvote(post: Post){
+        if(post.userVote != 1){
         this.http.post('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/vote', {
             post_id: post.id,
             user_id: this.user_id,
@@ -101,10 +102,13 @@ export class PostsComponent {
                 }
             }
         });
+    }
 
     }
 
     public downvote(post: Post){
+        if(post.userVote != -1){
+        
         this.http.post('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/vote', {
             post_id: post.id,
             user_id: this.user_id,
@@ -122,6 +126,8 @@ export class PostsComponent {
                 }
             }
         });
+
+    }
 
     }
 
