@@ -64,20 +64,20 @@ export class PostsComponent {
             user_id: this.user_id
         }).subscribe(data => { 
             console.log(data)
-            this.numPosts = Object.keys(data).length;
+            this.numPosts = Object.keys(data[0]['num']).length;
             if(Object.keys(data[0]['num']).length != 0){
-            for(var j = 0; j < this.posts.length; j++){
-                for(var i = 0; i < this.numPosts; i++){
-                    if(this.posts[j].id == data[0]['num'][i]['post_id']){
-                        if(data[0]['num'][i]['upvote'] == 1){
-                            this.posts[j].userVote = 1;
-                        }else{
-                            this.posts[j].userVote = -1;
+                for(var j = 0; j < this.posts.length; j++){
+                    for(var i = 0; i < this.numPosts; i++){
+                        if(this.posts[j].id == data[0]['num'][i]['post_id']){
+                            if(data[0]['num'][i]['upvote'] == 1){
+                                this.posts[j].userVote = 1;
+                            }else{
+                                this.posts[j].userVote = -1;
+                            }
                         }
                     }
                 }
             }
-        }
             
         
         });
