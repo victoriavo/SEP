@@ -1,3 +1,5 @@
+
+
 export class Post {
     id?: string;
     organization?: string;
@@ -7,4 +9,5 @@ export class Post {
     endTime?: string;
     description?: string;
     votes?: number;
+    userVote?: number;
 }

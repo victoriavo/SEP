@@ -11,10 +11,14 @@
                       <h5 class="card-info">End Time: {{post?.endTime | date:'medium' }}</h5>
                       <p class="card-info">Description: {{post?.description}}</p>
                       <div id="button-group" style="position: absolute; top: 25%; right: 20px">
-                        <i class="fa fa-angle-up upvote" style="font-size:36px;"
+                        <i class="fa fa-angle-up upvote" *ngIf="post?.userVote == 1;"style="font-size:36px; color: green;"
+                        (click)="upvote(post)" [hidden]="(click)"></i>
+                        <i class="fa fa-angle-up upvote" *ngIf="post?.userVote != 1;"style="font-size:36px;"
                         (click)="upvote(post)" [hidden]="(click)"></i>
                         <h5>{{post?.votes}}</h5>
-                        <i class="fa fa-angle-down downvote" style="font-size:36px" 
+                        <i class="fa fa-angle-down downvote" *ngIf="post?.userVote == -1;" style="font-size:36px; color: red;" 
+                        (click)="downvote(post)"></i>
+                        <i class="fa fa-angle-down downvote" *ngIf="post?.userVote != -1;" style="font-size:36px;" 
                         (click)="downvote(post)"></i>
                       </div>
                     </div>
