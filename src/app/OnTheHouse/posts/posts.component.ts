@@ -85,8 +85,14 @@ export class PostsComponent {
 
       public upvote(post: Post){
         if(post.userVote != 1){
+            if(post.userVote == -1){
+                post.votes = post.votes + 2;
+            }else{
+                post.votes = post.votes + 1;
+            }
         this.http.post('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/vote', {
             post_id: post.id,
+            vote_count: post.votes,
             user_id: this.user_id,
             upvote: "true"
             
@@ -95,8 +101,8 @@ export class PostsComponent {
             if(data[0]['valid'] == 1){
                 for(var j = 0; j < this.posts.length; j++){
                     if(this.posts[j].id == post.id){
-                        this.newNum = parseInt(this.posts[j].votes.toString()) + 1;
-                        this.posts[j].votes = this.newNum;
+                        //this.newNum = parseInt(this.posts[j].votes.toString()) + 1;
+                        this.posts[j].votes = post.votes;
                         this.posts[j].userVote = 1;
                     }
                 }
@@ -108,9 +114,14 @@ export class PostsComponent {
 
     public downvote(post: Post){
         if(post.userVote != -1){
-        
+            if(post.userVote == 1){
+                post.votes = post.votes - 2;
+            }else{
+                post.votes = post.votes - 1;
+            }
         this.http.post('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/vote', {
             post_id: post.id,
+            vote_count: post.votes,
             user_id: this.user_id,
             upvote: "false"
             
@@ -119,8 +130,8 @@ export class PostsComponent {
             if(data[0]['valid'] == 1){
                 for(var k = 0; k < this.posts.length; k++){
                     if(this.posts[k].id == post.id){
-                        this.newNum = parseInt(this.posts[k].votes.toString()) - 1;
-                        this.posts[k].votes = this.newNum;
+                       // this.newNum = parseInt(this.posts[k].votes.toString()) - 1;
+                        this.posts[k].votes = post.votes;
                         this.posts[k].userVote = -1;
                     }
                 }
