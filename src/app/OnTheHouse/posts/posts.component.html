@@ -3,7 +3,7 @@
     <div class="card mb-3" *ngFor="let post of posts; let i = index;" style="border:none">
             <div class="card-body post-background">
             <div class="container" id="row-container">
-                    <div class="card border-dark" style="height: 15rem;">
+                    <div class="card border-dark">
                       <h3 class="card-title appName p-2" id="card-title">{{post?.eventName}}</h3>
                       <h5 class="card-info">Organized by: {{post?.organization}}</h5>
                       <h5 class="card-info">Location: {{post?.location}}</h5>
