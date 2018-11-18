@@ -7,8 +7,8 @@
                       <h3 class="card-title appName p-2" id="card-title">{{post?.eventName}}</h3>
                       <h5 class="card-info">Organized by: {{post?.organization}}</h5>
                       <h5 class="card-info">Location: {{post?.location}}</h5>
-                      <h5 class="card-info">Start Time: {{post?.startTime | date:'medium' }}</h5>
-                      <h5 class="card-info">End Time: {{post?.endTime | date:'medium' }}</h5>
+                      <h5 class="card-info">Date: {{post?.startTime | date:'mediumDate'}} </h5>
+                      <h5 class="card-info">Time: {{post?.startTime | date:'shortTime'}} - {{post?.endTime | date:'shortTime' }}</h5>
                       <p class="card-info">Description: {{post?.description}}</p>
                       <div id="button-group" style="position: absolute; top: 25%; right: 20px">
                         <i class="fa fa-angle-up upvote" *ngIf="post?.userVote == 1;" style="font-size:36px; color: green;"
