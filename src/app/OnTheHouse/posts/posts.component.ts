@@ -103,7 +103,6 @@ export class PostsComponent {
             if(data[0]['valid'] == 1){
                 for(var j = 0; j < this.posts.length; j++){
                     if(this.posts[j].id == post.id){
-                        console.log(this.newNum);
                         this.posts[j].votes = this.newNum;
                         this.posts[j].userVote = 1;
                     }
@@ -134,7 +133,6 @@ export class PostsComponent {
             if(data[0]['valid'] == 1){
                 for(var k = 0; k < this.posts.length; k++){
                     if(this.posts[k].id == post.id){
-                        console.log(this.newNum);
                         this.posts[k].votes = this.newNum;
                         this.posts[k].userVote = -1;
                     }
