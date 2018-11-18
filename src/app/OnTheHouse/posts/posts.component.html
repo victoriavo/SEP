@@ -1,6 +1,6 @@
 <div class="breadcrumb" id="noposts" *ngIf="posts?.length == 0; else notEmpty">Be the first to add a post!</div>
 <ng-template #notEmpty>
-    <div class="card mb-3" *ngFor="let post of posts; let i = index;" style="border:none">
+    <div class="card mb-3" *ngFor="let post of posts; let i = index;" style="border:none" [hidden]="post?.votes == -5">
             <div class="card-body post-background">
             <div class="container" id="row-container">
                     <div class="card border-dark">
@@ -11,9 +11,9 @@
                       <h5 class="card-info">End Time: {{post?.endTime | date:'medium' }}</h5>
                       <p class="card-info">Description: {{post?.description}}</p>
                       <div id="button-group" style="position: absolute; top: 25%; right: 20px">
-                        <i class="fa fa-angle-up upvote" *ngIf="post?.userVote == 1;"style="font-size:36px; color: green;"
+                        <i class="fa fa-angle-up upvote" *ngIf="post?.userVote == 1;" style="font-size:36px; color: green;"
                         (click)="upvote(post)" [hidden]="(click)"></i>
-                        <i class="fa fa-angle-up upvote" *ngIf="post?.userVote != 1;"style="font-size:36px;"
+                        <i class="fa fa-angle-up upvote" *ngIf="post?.userVote != 1;" style="font-size:36px;"
                         (click)="upvote(post)" [hidden]="(click)"></i>
                         <h5>{{post?.votes}}</h5>
                         <i class="fa fa-angle-down downvote" *ngIf="post?.userVote == -1;" style="font-size:36px; color: red;" 

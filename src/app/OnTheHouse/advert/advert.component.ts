@@ -16,7 +16,7 @@ export class AdvertComponent implements OnInit {
   ngOnInit() {
     
     this.advert.name = "Subway";
-    this.advert.information = "STEAK it up a notch with the all new Chipotle Steak Sandwitch";
+    this.advert.information = "STEAK it up a notch with the all new Chipotle Steak Sandwich";
     this.advert.location = "3426 Oak Lawn Avenue";
     this.advert.link = "https://www.subway.com/en-US/MenuNutrition/Menu";
   }
