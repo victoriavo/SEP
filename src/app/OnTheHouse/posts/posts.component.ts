@@ -86,9 +86,11 @@ export class PostsComponent {
       public upvote(post: Post){
         if(post.userVote != 1){
             if(post.userVote == -1){
-                post.votes = post.votes + 2;
+                this.newNum = parseInt(post.votes.toString()) + 2;
+                post.votes = this.newNum;
             }else{
-                post.votes = post.votes + 1;
+                this.newNum = parseInt(post.votes.toString()) + 1;
+                post.votes = this.newNum;
             }
         this.http.post('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/vote', {
             post_id: post.id,
@@ -101,8 +103,8 @@ export class PostsComponent {
             if(data[0]['valid'] == 1){
                 for(var j = 0; j < this.posts.length; j++){
                     if(this.posts[j].id == post.id){
-                        //this.newNum = parseInt(this.posts[j].votes.toString()) + 1;
-                        this.posts[j].votes = post.votes;
+                        console.log(this.newNum);
+                        this.posts[j].votes = this.newNum;
                         this.posts[j].userVote = 1;
                     }
                 }
@@ -115,9 +117,11 @@ export class PostsComponent {
     public downvote(post: Post){
         if(post.userVote != -1){
             if(post.userVote == 1){
-                post.votes = post.votes - 2;
+                this.newNum = parseInt(post.votes.toString()) - 2;
+                post.votes = this.newNum;
             }else{
-                post.votes = post.votes - 1;
+                this.newNum = parseInt(post.votes.toString()) - 1;
+                post.votes = this.newNum;
             }
         this.http.post('http://ec2-18-188-176-205.us-east-2.compute.amazonaws.com/vote', {
             post_id: post.id,
@@ -130,8 +134,8 @@ export class PostsComponent {
             if(data[0]['valid'] == 1){
                 for(var k = 0; k < this.posts.length; k++){
                     if(this.posts[k].id == post.id){
-                       // this.newNum = parseInt(this.posts[k].votes.toString()) - 1;
-                        this.posts[k].votes = post.votes;
+                        console.log(this.newNum);
+                        this.posts[k].votes = this.newNum;
                         this.posts[k].userVote = -1;
                     }
                 }
