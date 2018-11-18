@@ -1,19 +1,43 @@
-<div *ngIf="advert.name == null; else notEmpty"></div>
-<ng-template #notEmpty>
-        <div class="card mb-3" style="border:none" >
-                <a href="{{advert?.link}}" target="_blank">
-                <div class="card-body post-background">
+<!--
+<div class="card mb-3" style="border:none" >
+        <a href="{{advert?.link}}" target="_blank">
+        <div class="card-body post-background">
                 <div class="container" id="row-container">
                         <div class="card border-dark" style="height: 15rem;">
                           <h5 class="card-title appName pt-1 pl-1" id="card-title">AD</h5>
                           <h3 class="card-title appName p-1" id="card-title">{{advert?.name}}</h3>
                           <h2 class="card-info">{{advert?.information}}</h2>
-                          <h5 class="card-info">Address: {{advert?.location}}</h5>
+                          <h5 class="card-info">Address: {{advert?.location}}</h5> -->
                           <!-- <img class="card-img-bottom" src="/src/images/2.jpg" alt="Card image cap"> -->
-                         
+<!--                         
                         </div>
-                      </div>
+        </div>
                 
+</div>
+-->
+<div *ngIf="advert.name == null; else notEmpty"></div>
+<ng-template #notEmpty>
+        <div class="card mb-3" style="border:none">
+                <a href="{{advert?.link}}" target="_blank">
+                <div class="card-body post-background">
+                        <div class="container" id="row-container">
+                                <div class="card border-dark">
+                                                <div class="card border-dark">
+                                                        <h5 id="ad-distinguisher">AD</h5>
+                                                        <h3 class="card-title appName p-2" id="ad-title">{{advert?.name}}</h3>
+                                                        <h3 class="card-info" style="padding-top: 20px; color: black">{{advert?.information}}</h3>
+                                                        <h5 class="card-info" style="color: black">Address: {{advert?.location}}</h5>
+                                                        <img class="card-img-bottom" src="/src/images/subway-ad.png" alt="Card image cap">
+                                                        <!-- <img class="card-img-bottom" src="/src/images/2.jpg" alt="Card image cap"> -->
+                                <!--
+                                <h3 class="card-title appName p-2" id="card-title">{{post?.eventName}}</h3>
+                                <h5 class="card-info">Organized by: {{post?.organization}}</h5>
+                                <h5 class="card-info">Location: {{post?.location}}</h5>
+                                <h5 class="card-info">Start Time: {{post?.startTime | date:'medium' }}</h5>
+                                <h5 class="card-info">End Time: {{post?.endTime | date:'medium' }}</h5>
+                                <p class="card-info">Description: {{post?.description}}</p>
+                                -->
+                                </div>
+                        </div>
                 </div>
-        <br>
-        
+        </div>
