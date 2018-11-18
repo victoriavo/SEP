@@ -66,9 +66,14 @@ export class MakePostComponent{
       console.log(output);
         if(output['valid'] == 0){
           this.success = false;
-          this.errorMessage = output['errorMessage'];
+          this.errorMessage = output['error'];
         }
-        this.router.navigate(['/dashboard']);
+        if(this.errorMessage != ""){
+          alert(this.errorMessage);
+        }
+        else{
+          this.router.navigate(['/dashboard']);
+        }
     });
 
   }
