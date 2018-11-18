@@ -51,3 +51,11 @@ i.downvote:hover {
     top: 0px;
     color: black;
 }
+
+#ad-image { 
+    display : none; 
+}
+
+#ad-container:hover #ad-image{ 
+    display : block; 
+}

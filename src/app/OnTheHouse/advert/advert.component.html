@@ -17,7 +17,7 @@
 -->
 <div *ngIf="advert.name == null; else notEmpty"></div>
 <ng-template #notEmpty>
-        <div class="card mb-3" style="border:none">
+        <div class="card mb-3" style="border:none" id="ad-container">
                 <a href="{{advert?.link}}" target="_blank">
                 <div class="card-body post-background">
                         <div class="container" id="row-container">
@@ -27,7 +27,7 @@
                                                         <h3 class="card-title appName p-2" id="ad-title">{{advert?.name}}</h3>
                                                         <h3 class="card-info" style="padding-top: 20px; color: black">{{advert?.information}}</h3>
                                                         <h5 class="card-info" style="color: black">Address: {{advert?.location}}</h5>
-                                                        <img class="card-img-bottom" src="/src/images/subway-ad.png" alt="Card image cap">
+                                                        <img class="card-img-bottom" src="/src/images/subway-ad.png" alt="Card image cap" id="ad-image">
                                                         <!-- <img class="card-img-bottom" src="/src/images/2.jpg" alt="Card image cap"> -->
                                 <!--
                                 <h3 class="card-title appName p-2" id="card-title">{{post?.eventName}}</h3>
